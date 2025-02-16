@@ -4,6 +4,7 @@ function sum(a, b) {
     return a + b;
   }
   console.log("Los datos de entrada no son adecuados");
+  return;
 }
 
 // Factorial of a Number
@@ -25,6 +26,7 @@ function findLargest(arr) {
     return arr.reduce((a, b) => Math.max(a, b), -Infinity);
   }
   console.log("Los datos de entrada no son adecuados");
+  return;
 }
 
 // Count Vowels in a String
@@ -34,6 +36,7 @@ function countVowels(str) {
     return (str.match(regex) || []).length;
   }
   console.log("Los datos de entrada no son adecuados");
+  return;
 }
 
 
@@ -43,8 +46,8 @@ function isPrime(n) {
     console.log("Los datos de entrada no son adecuados");
     return;
   }
-  for(let i = 2; (i*i)<=n; i++){
-    if(n%i===0){
+  for(let i = 2; i * i <=n; i++){
+    if(n % i === 0){
       return false;
     }
   }
