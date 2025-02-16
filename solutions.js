@@ -21,7 +21,7 @@ function factorial(n) {
 
 // Find the Largest Number
 function findLargest(arr) {
-  if(Array.isArray(arr) && arr.every(num => typeof num === 'number')){
+  if (Array.isArray(arr) && arr.length && arr.every(num => typeof num === 'number')) {
     return arr.reduce((a, b) => Math.max(a, b), -Infinity);
   }
   console.log("Los datos de entrada no son adecuados");
@@ -43,7 +43,7 @@ function isPrime(n) {
     console.log("Los datos de entrada no son adecuados");
     return;
   }
-  for(let i = 2; (i*i)<n; i++){
+  for(let i = 2; (i*i)<=n; i++){
     if(n%i===0){
       return false;
     }
