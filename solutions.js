@@ -39,7 +39,16 @@ function countVowels(str) {
 
 // Check if a Number is Prime
 function isPrime(n) {
-  // Add your code here
+  if(!(typeof n === 'number' && Number.isInteger(n) && n>1)){
+    console.log("Los datos de entrada no son adecuados");
+    return;
+  }
+  for(let i = 2; (i*i)<n; i++){
+    if(n%i===0){
+      return false;
+    }
+  }
+  return true;
 }
 
 module.exports = {
