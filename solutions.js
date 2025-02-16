@@ -1,6 +1,9 @@
 // Sum of Two Numbers
 function sum(a, b) {
-  // Add your code here
+  if(typeof a === 'number' && typeof b === 'number'){
+    return a + b;
+  }
+  console.log("Los datos de entrada no son adecuados")
 }
 
 // Factorial of a Number
