@@ -10,6 +10,7 @@ function sum(a, b) {
 function factorial(n) {
   if(!(typeof n=== 'number' && n>=0 && Number.isInteger(n))){
     console.log("Los datos de entrada no son adecuados")
+    return;
   }
   let result = 1;
   for(let i = 2; i<=n; i++){
@@ -28,8 +29,13 @@ function findLargest(arr) {
 
 // Count Vowels in a String
 function countVowels(str) {
-  // Add your code here
+  if (typeof str === 'string'){
+    const regex = /[aeiou]/gi;
+    return (str.match(regex) || []).length;
+  }
+  console.log("Los datos de entrada no son adecuados");
 }
+
 
 // Check if a Number is Prime
 function isPrime(n) {
