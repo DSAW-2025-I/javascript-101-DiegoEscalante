@@ -20,7 +20,10 @@ function factorial(n) {
 
 // Find the Largest Number
 function findLargest(arr) {
-  // Add your code here
+  if(Array.isArray(arr) && arr.every(num => typeof num === 'number')){
+    return arr.reduce((a, b) => Math.max(a, b), -Infinity);
+  }
+  console.log("Los datos de entrada no son adecuados");
 }
 
 // Count Vowels in a String
